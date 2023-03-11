@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.release.outputs.upload_url }}
-          assert_path: redat_me_v${{ steps.version.outputs.version }}.tar.gz
+          asset_path: redat_me_v${{ steps.version.outputs.version }}.tar.gz
           asset_name: redat_me_v${{ steps.version.outputs.version }}.tar.gz
           asset_content_type: application/gzip
         env:
