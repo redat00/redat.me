@@ -1,0 +1,40 @@
+baseURL = 'https://redat.me'
+languageCode = 'fr-fr'
+title = 'Redat'
+theme = 'blowfish'
+
+[Params]
+    mainSections = ["posts"]
+    intro = true
+    headline = "Redat"
+    github = "https://github.com/redat00"
+
+[author]
+  name = "Renaud Duret"
+  image = "img/avatar.jpg"
+  headline = "DevOps Engineer @ Qarnot Computing"
+  bio = ""
+  links = [
+     { github = "https://github.com/redat00" },
+  ]
+
+[article]
+  showDate = true
+  #showViews = true
+  #showLikes = true
+  showDateUpdated = false
+  showAuthor = true
+  showBreadcrumbs = true
+  showDraftLabel = true
+  #showEdit = true
+  editAppendPath = true
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+  showReadingTime = true
+  showTableOfContents = true
+  showTaxonomies = true 
+  showWordCount = true
+  showSummary = true
+  sharingLinks = [ "linkedin", "twitter", "whatsapp", "pinterest", "reddit", "facebook", "email"]
+
