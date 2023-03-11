@@ -30,7 +30,7 @@ jobs:
       - name: Build hugo website and zipping it
         run: |
           /bin/hugo
-          tar cf redat_me_v${{ steps.version.outputs.version }}.tar.gz public/
+          tar cf redat_me_v${{ steps.version.outputs.version }}.tar.gz -C public .
 
       - name: Release website
         uses: actions/create-release@v1
