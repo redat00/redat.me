@@ -39,7 +39,7 @@ jobs:
           prerelease: false
           body: "Release ${{ steps.version.outputs.version }} of the website"
           release_name: ${{ steps.version.outputs.version }}
-          tag_name: ${{ github.ref }}
+          tag_name: ${{ steps.version.outputs.version }}
         id: release
         env:
           GITHUB_TOKEN: ${{ github.token }}
