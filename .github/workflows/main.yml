@@ -1,0 +1,50 @@
+name: redat.me CI
+
+on:
+  push:
+    branches: main
+env: 
+  HUGO_VERSION: "0.104.3"
+
+jobs:
+  hugo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download and install Hugo
+        run: |
+          wget -O /tmp/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.tar.gz
+          sudo tar xvf /tmp/hugo.tar.gz -C /bin
+
+      - name: Get website version
+        run: echo "::set-output name=version::$(cat website_version)"
+        id: version
+
+      - name: Build hugo website and zipping it
+        run: |
+          /bin/hugo
+          tar cf redat_me_v${{ steps.version.outputs.version }}.tar.gz public/
+
+      - name: Release website
+        uses: actions/create-release@v1
+        with:
+          draft: false
+          prerelease: false
+          body: "Release ${{ steps.version.outputs.version }} of the website"
+          release_name: ${{ steps.version.outputs.version }}
+          tag_name: ${{ github.ref }}
+        id: release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Upload artefacts
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          assert_path: redat_me_v${{ steps.version.outputs.version }}.tar.gz
+          asset_name: redat_me_v${{ steps.version.outputs.version }}.tar.gz
+          asset_content_type: application/gzip
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
