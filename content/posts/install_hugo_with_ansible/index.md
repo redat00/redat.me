@@ -68,9 +68,7 @@ If you stopped here, you'll be fine, and you will have Hugo installed on your se
 
 To use Hugo, you should read the [official documentation](https://gohugo.io/documentation/) which is really well written. While reading the documentation is something you should do, as always, using Hugo is not that hard, and you only need to know a few commands. 
 
-{{< alert >}}
 All of the following command, except `hugo new site` should be run inside of an already created Hugo site, otherwise they will simply result in an error.
-{{< /alert >}}
 
 | Command | Description |
 | ------- | ------------- |
@@ -167,3 +165,4 @@ theme = 'blowfish'
 If you followed all the steps of this post, you should know have a set-up Hugo website ready to be used, with a nice looking theme, only using Ansible. You could go deeper in the Ansible way, and use it to deploy your website content since they're only Markdown file, but personnaly I only use Ansible to set-up the application, and the content if it's stored on Git or an S3, I don't want to mix applications set-up and content. 
 
 I hope you found this post useful! Until the next time, take care!
+
