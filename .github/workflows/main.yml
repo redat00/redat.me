@@ -8,6 +8,7 @@ env:
 
 jobs:
   hugo:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
