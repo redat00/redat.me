@@ -1,0 +1,9 @@
+baseURL: https://redat.me
+languageCode: en-us
+title: Redat
+theme: Papermod
+
+params:
+  homeInfoParams:
+    Title: Welcome ! 👋
+    Content: Contents about open source projects, DevOps solutions and more...
