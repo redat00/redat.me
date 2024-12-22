@@ -2,8 +2,10 @@ baseURL: https://redat.me
 languageCode: en-us
 title: Redat
 theme: Papermod
+justifyContent: true
 
 params:
   homeInfoParams:
-    Title: Welcome ! 👋
-    Content: Contents about open source projects, DevOps solutions and more...
+    Title: Welcome to my blog ! 👋
+    Content: |
+      I'm a French DevOps Engineer ! I love learning new skills, and finding solution to automate more and more stuff. On this blog is where I'll share thoughts about tools I use day-to-day, or any other content I find worth sharing !
