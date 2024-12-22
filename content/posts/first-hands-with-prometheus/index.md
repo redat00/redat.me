@@ -2,6 +2,10 @@
 title = 'First Hands With Prometheus'
 date = 2024-03-26T17:41:50+01:00
 draft = false
+ShowToc = true
+ShowCodeCopyButtons = true
+ShowReadingTime = true
+ShowShareButtons = true
 
 [cover]
 image = "images/cover.png"
@@ -223,7 +227,7 @@ Dashboards in Grafana are written as JSON objects, so using it is just a matter 
 
 ![The Grafana dashboard](images/07.png)
 
-### Conclusion
+## Conclusion
 
 I get why people use Prometheus and work with it. It gets the job done. There is no messing around. You export data, that are then scraped by Prometheus and ready to be used to create alerts depending or their values, or to be displayed for beautiful insights about your infrastructure. Of course I did not really went to deep with it. It was the first time I was using it, and setting up an instance. But now that I saw how easy and complete the solution was, I will definitely continue using it.
 
@@ -231,6 +235,6 @@ I will certainly spend more time messing with the alerting aspect which I did no
 
 Until next time, take care !
 
-#### Credits
+## Credits
 
 1. The first picture showing the architecture of Prometheus comes from : https://help.ovhcloud.com/csm/fr-public-cloud-kubernetes-monitoring-apps-prometheus-grafana?id=kb_article_view&sysparm_article=KB0055249
